@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>戀愛小館</title>
+	<style>
+		:root{--accent:#c94c66;--bg:#fff4f6;--card:#ffffff}
+		*{box-sizing:border-box}
+		body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:#333}
+		header{background:linear-gradient(90deg,var(--accent),#ff8aa2);color:#fff;padding:16px;position:sticky;top:0;z-index:100}
+		.container{max-width:1000px;margin:20px auto;padding:0 16px}
+		nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+		nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;font-size:14px}
+		nav a:hover{background:rgba(255,255,255,0.15)}
+		.hero{display:flex;align-items:center;justify-content:space-between;gap:20px}
+		.hero h1{margin:0;font-size:28px}
+		.card{background:var(--card);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+		.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+		.menu-item{display:flex;flex-direction:column;gap:8px}
+		.price{font-weight:700;color:var(--accent)}
+		footer{text-align:center;padding:20px 0;color:#666;margin-top:30px}
+		form input,form textarea{width:100%;padding:8px;border:1px solid #e6d8dd;border-radius:6px;font-size:16px}
+		.btn{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-size:14px}
+		.btn:active{opacity:0.9}
+		@media(max-width:768px){
+			.container{margin:16px auto;padding:0 12px}
+			header{padding:12px}
+			.hero{flex-direction:column;align-items:flex-start;gap:16px}
+			.hero h1{font-size:24px}
+			.hero svg{width:150px;height:150px}
+			.grid{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+			nav a{padding:6px 10px;font-size:12px}
+			.card{padding:14px}
+			form input,form textarea{padding:10px}
+		}
+		@media(max-width:480px){
+			header{padding:10px}
+			.container{margin:12px auto;padding:0 12px}
+			.hero h1{font-size:20px}
+			.hero svg{width:120px;height:120px}
+			.card{padding:12px}
+			.grid{grid-template-columns:1fr;gap:12px}
+			h2{font-size:20px}
+			h3{font-size:16px}
+			nav{gap:8px}
+			nav a{padding:6px 8px;font-size:11px}
+			nav>div:first-child{font-size:14px}
+			footer{font-size:12px;padding:16px 0;margin-top:20px}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav>
+				<div style="font-weight:700">戀愛小館</div>
+				<div style="flex:1"></div>
+				<a href="#home">首頁</a>
+				<a href="#menu">菜單</a>
+				<a href="#contact">聯絡資訊</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container">
+		<section id="home" class="card hero" aria-label="首頁">
+			<div>
+				<h1>歡迎來到戀愛小館</h1>
+				<p>溫暖的氛圍、手作料理與甜蜜的時光。無論約會或朋友聚餐，我們都用心準備每一道菜。</p>
+				<p><strong>營業時間：</strong>每日 11:00 - 21:30</p>
+			</div>
+			<svg width="180" height="180" viewBox="0 0 180 180" style="flex-shrink:0">
+			<circle cx="90" cy="90" r="70" fill="none" stroke="var(--accent)" stroke-width="2"/>
+			<path d="M 90 55 C 70 35 35 55 45 85 C 55 115 90 140 90 140 C 90 140 125 115 135 85 C 145 55 110 35 90 55 Z" fill="var(--accent)"/>
+		</svg>
+		</section>
+
+		<section id="menu" class="card" style="margin-top:20px">
+			<h2>菜單</h2>
+			<p>我們的招牌與人氣推薦：</p>
+			<div class="grid">
+				<div class="menu-item card">
+					<h3>戀愛牛肉燉飯</h3>
+					<div>慢燉牛肉搭配香濃番茄醬汁，口感柔嫩。</div>
+					<div class="price">NT$320</div>
+				</div>
+				<div class="menu-item card">
+					<h3>玫瑰海鮮義大利麵</h3>
+					<div>鮮蝦、淡菜與特製玫瑰醬，風味輕柔不膩。</div>
+					<div class="price">NT$360</div>
+				</div>
+				<div class="menu-item card">
+					<h3>巧克力心太軟</h3>
+					<div>溫熱流心巧克力，搭配香草冰淇淋。</div>
+					<div class="price">NT$160</div>
+				</div>
+				<div class="menu-item card">
+					<h3>戀愛特調飲</h3>
+					<div>季節水果調配氣泡飲，清爽解膩。</div>
+					<div class="price">NT$140</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="card" style="margin-top:20px">
+			<h2>聯絡資訊</h2>
+			<p>預約或詢問，歡迎透過以下方式聯繫我們：</p>
+			<div style="display:flex;gap:20px;flex-wrap:wrap">
+				<div style="flex:1;min-width:260px">
+					<p>地址：台北市幸福路100號</p>
+					<p>電話：02-1234-5678</p>
+					<p>Email：hello@lovecafe.tw</p>
+				</div>
+				<div style="flex:1;min-width:260px">
+					<form onsubmit="alert('表單送出範例 — 實作請串接後端');return false;">
+						<label>姓名</label>
+						<input type="text" required>
+						<label style="margin-top:8px">聯絡電話或Email</label>
+						<input type="text" required>
+						<label style="margin-top:8px">留言</label>
+						<textarea rows="4" required></textarea>
+						<div style="margin-top:10px;text-align:right">
+							<button class="btn" type="submit">送出</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			&copy; 2026 戀愛小館 — 期待與你相遇
+		</footer>
+	</main>
+  
+</body>
+</html>
